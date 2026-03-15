@@ -24,7 +24,7 @@ jobs:
 
       - name: Build executable with PyInstaller
         run: |
-          pyinstaller main.spec
+          pyinstaller Gem-Gem.spec
 
       - name: Zip executable
         run: |
