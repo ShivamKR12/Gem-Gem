@@ -1,4 +1,5 @@
-"""A simple match-3 style gem-swapping game.
+"""
+A simple match-3 style gem-swapping game.
 
 This script is a self-contained game that uses Pygame to draw colorful gems
 on the screen. The player swaps gems to make matches of 3 or more identical
