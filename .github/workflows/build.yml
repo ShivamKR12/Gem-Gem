@@ -3,12 +3,9 @@ name: Build Desktop Executables
 on:
   push:
     paths:
-      - '**.py'
-      - '**.spec'
-      - '**.ini'
-      - 'requirements.txt'
-      - 'setup.py'
-      - '.github/workflows/*.yml'
+      - 'main.py'
+      - 'main.spec'
+      - '.github/workflows/build.yml'
   workflow_dispatch:
 
 permissions:
@@ -41,11 +38,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pyinstaller pygame-ce
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         shell: bash
 
       - name: Build with PyInstaller
-        run: pyinstaller Gem-Gem.spec
+        run: pyinstaller main.spec
         shell: bash
 
       - name: Archive Windows executable

@@ -2,10 +2,10 @@
 
 
 a = Analysis(
-    ['Gem-Gem.py'],
+    ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[('gem*.png', '.'), ('badswap.wav', '.'), ('match*.wav', '.')],
+    datas=[('assets', 'assets')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
