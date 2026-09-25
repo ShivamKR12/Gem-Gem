@@ -46,15 +46,15 @@ jobs:
 
       - name: Archive Windows executable
         if: runner.os == 'Windows'
-        run: Compress-Archive -Path dist/gem-gem.exe -DestinationPath gem-gem-windows.zip
+        run: Compress-Archive -Path dist/Gem-Gem.exe -DestinationPath gem-gem-windows.zip
 
       - name: Archive Linux executable
         if: runner.os == 'Linux'
-        run: tar -czvf gem-gem-linux.tar.gz -C dist gem-gem
+        run: tar -czvf gem-gem-linux.tar.gz -C dist Gem-Gem
 
       - name: Archive macOS application
         if: runner.os == 'macOS'
-        run: zip -j gem-gem-macos.zip dist/gem-gem
+        run: zip -j gem-gem-macos.zip dist/Gem-Gem
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
